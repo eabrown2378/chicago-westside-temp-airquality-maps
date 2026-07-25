@@ -1,19 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>West Side Neighborhoods Heat and Air Pollution Data</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Chicago West Side Heat & Air Pollution Maps</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #eef6fb, #ffffff);
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 70px auto;
+        padding: 0 25px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #154c79;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 45px;
+    }
+
+    .map-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        display: block;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #154c79;
+        font-size: 1.2rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    .subtitle {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #666;
+        font-weight: normal;
+    }
+
+    footer {
+        margin-top: 60px;
+        color: #777;
+        font-size: 0.9rem;
+    }
+</style>
+
+</head>
 <body>
 
-<h1>Temperature and Air Quality Maps</h1>
+<div class="container">
 
-<ul>
-  <li><a href="max_temp.html">Maximum Temperature</a></li>
-  <li><a href="mean_temp.html">Mean Temperature</a></li>
-  <li><a href="max_pm25.html">Maximum PM 2.5</a></li>
-  <li><a href="mean_pm25.html">Mean PM 2.5</a></li>
-</ul>
+<h1>Chicago West Side Heat & Air Pollution Maps</h1>
+
+<p>
+Explore interactive maps of summer temperature and PM<sub>2.5</sub> concentrations
+across Chicago's West Side neighborhoods. These maps were developed to support
+community outreach and identify areas with elevated heat and air pollution exposure.
+</p>
+
+<div class="map-grid">
+
+<a class="card" href="max_temp.html">
+    Maximum Temperature
+    <span class="subtitle">Highest observed temperatures</span>
+</a>
+
+<a class="card" href="mean_temp.html">
+    Mean Temperature
+    <span class="subtitle">Average summer temperatures</span>
+</a>
+
+<a class="card" href="max_pm25.html">
+    Maximum PM<sub>2.5</sub>
+    <span class="subtitle">Highest fine particulate concentrations</span>
+</a>
+
+<a class="card" href="mean_pm25.html">
+    Mean PM<sub>2.5</sub>
+    <span class="subtitle">Average fine particulate concentrations</span>
+</a>
+
+</div>
+
+<footer>
+Created for the Chicago West Side Heat & Air Pollution Project
+</footer>
+
+</div>
 
 </body>
 </html>
