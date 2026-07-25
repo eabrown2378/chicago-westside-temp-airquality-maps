@@ -40,8 +40,16 @@
 
     .map-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 650px) {
+        .map-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     .card {
@@ -112,6 +120,20 @@ community outreach and identify areas with elevated heat and air pollution expos
     <span class="subtitle">Average fine particulate concentrations</span>
 </a>
 
+</div>
+
+<div class="attribution">
+    <h3>Data Source</h3>
+    <p>
+        Temperature and PM<sub>2.5</sub> estimates were derived from publicly
+        available sensor data provided by
+        <a href="https://openairchicago.org/" target="_blank" rel="noopener">
+            OpenAir Chicago
+        </a>.
+        The maps shown here are interpolated estimates created for educational
+        and community outreach purposes and should not be interpreted as direct
+        sensor measurements at every location.
+    </p>
 </div>
 
 <footer>
